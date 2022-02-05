@@ -13,7 +13,7 @@
     <style>
         body
         {
-            background-color: gray;
+            background: linear-gradient(-135deg, #fd8802, #9941D8) fixed;
         }
         .tittle
         {
@@ -24,6 +24,7 @@
             background-color: rgba(255, 255, 255, 0.1);
             border: none;
             height: 40px;
+            width: 80px;
             border-radius: 8px;            
         }
         .bu
@@ -35,19 +36,28 @@
             border-radius: 12px;
             font-size: xx-large;
         }
-        p
+        .callingTheAlert
         {
-            color: goldenrod;
-            font-size: x-large;
+            font-size:xx-small;
+            height: 200px;
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-top: auto;
+            line-height: 200px;
         }
     </style>
     <center><h1 class = "tittle">Test_Your_Luck</h1></center>
-    <center><p>주의사항<br>1*생년월일을 정확하게 입력해 주세요.<br>2*운세는 운세일뿐 진지하게 생각하지 말아주세요.</p></center>
+    <br>
+    <br>
+    <center><div class="callingTheAlert"><h1 id = "callingTheAlert"></h1></div></center>
+    <br>
     <form name="luck">
         <center>
             <input class = "in" type="number" name = "month" >월
             <input class = "in" type="number" name = "day">일<br><br>
-            <button class = "bu"  onclick = "check(this.form)">result</button>
+            <br>
+            <button class = "bu"  onclick = "check(this.form); return false;">result</button>
+            <button class = "bu"  onclick = "reset();">reset</button>
         </center>
     </form>
 </body>
